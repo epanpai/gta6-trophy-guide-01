@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: roadmap to the platinum, missable flags, cited guides, saved checklist.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Leonida</p>
+    <h1>VICE LEGEND</h1>
+    <p class="subtitle">The complete trophy guide &amp; tracker — 55 trophies, 1 platinum, 2 gold, 6 silver, 46 bronze. Every guide in our own words, with its sources named.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-count" id="progressCount">0 / 55 earned</p>
+    <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><span id="progressFill"></span></div>
+    <p class="progress-pct" id="progressPct">0% to the platinum</p>
+    <p class="progress-grades" id="progressGrades"></p>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Tracker controls">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy name, mission, keyword…" autocomplete="off"></label>
+  <div class="kind-filters" id="kindFilters" role="group" aria-label="Filter by kind">
+    <button type="button" data-kind="all" class="active" aria-pressed="true">All</button>
+    <button type="button" data-kind="story" aria-pressed="false">Story</button>
+    <button type="button" data-kind="missable" aria-pressed="false">Missable</button>
+    <button type="button" data-kind="collectibles" aria-pressed="false">Collectibles</button>
+    <button type="button" data-kind="activities" aria-pressed="false">Activities</button>
+  </div>
+  <label>Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check"><input id="onlyUnearned" type="checkbox"> Only not yet earned</label>
+  <label class="check spoiler"><input id="spoiler" type="checkbox"> Spoiler-safe: hide story trophies until earned</label>
+  <div class="actions">
+    <button id="export" type="button">Export progress</button>
+    <label class="import-btn">Import progress <input id="import" type="file" accept="application/json,.json"></label>
+    <button id="reset" type="button">Reset progress</button>
+  </div>
+</nav>
+
+<main>
+  <section id="checklistSection" aria-labelledby="checklistTitle">
+    <h2 id="checklistTitle">Checklist — all 55 trophies</h2>
+    <p class="section-note">Tick a trophy off when you earn it; progress is saved in this browser. Click any trophy for its full guide and sources. <span id="resultCount"></span></p>
+    <ul class="cards" id="cards"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section id="roadmap" aria-labelledby="roadmapTitle">
+    <h2 id="roadmapTitle">Roadmap to the platinum</h2>
+    <p class="section-note">One playthrough, about 200 hours, difficulty 4/10 (PowerPyx, via GTA Zone). No difficulty settings, no mission replay, no online trophies — free roam continues after the credits, so everything except one trophy can be cleaned up afterwards.</p>
+    <ol class="stages" id="stages"></ol>
+  </section>
+
+  <section id="missableSection" aria-labelledby="missableTitle">
+    <h2 id="missableTitle">Missable — don&rsquo;t let these slip</h2>
+    <p class="section-note">Only one trophy on the whole list can be missed. Everything else is either story progress or stays open in free roam after the credits.</p>
+    <ul class="missable-list" id="missableList"></ul>
+  </section>
+</main>
+
+<dialog id="detail" class="detail">
+  <form method="dialog" class="detail-close"><button type="submit" aria-label="Close">✕</button></form>
+  <div id="detailBody" class="detail-body"></div>
+</dialog>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games, Sony or PlayStation. Trophy names and descriptions are shown as PlayStation publishes them; every guide is written in our own words and cites its sources. No Rockstar logo, artwork or game screenshot is used anywhere in this guide.</p>
+  <p>Sources for the list and counts: <a href="https://exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase — Grand Theft Auto VI Trophies (PS5)</a> · <a href="https://gta-zone.com/news/gta-6-trophies-achievements/">GTA Zone — GTA 6 Trophy List</a> · <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a> · <a href="https://press-start.com.au/news/2026/11/18/gta-6-trophy-list/">Press Start — GTA 6 Trophy List</a></p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
